@@ -1,0 +1,122 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<html>
+<head>
+    <title>Product-Manage</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   	<link rel="stylesheet" href="<c:url value='/resources/admin/product-admin.css'/>"/>
+</head>
+<body>
+    <div class="container" style="margin-top: 50px;">
+
+            <div class="col-md-6 col-sm-12 form-group">
+                <form id="form-sanpham">
+                    <label>Tên Sản Phẩm</label>
+                    <input type="text" class="form-control" id="tenSanPham" name="tenSanPham"></br>
+
+                    <label>Giá Tiền</label>
+                    <input type="text" class="form-control" id="giaTien" name="giaTien"></br>
+
+                    <label for="danhmucsanpham">Danh Mục</label><br>
+                    <select id="danhmucsanpham" name="danhmucsanpham" class="form-control">
+                       <c:forEach items="${categoryList}" var="categoryList">
+                            <option value="${categoryList.category_id}">${categoryList.category_name}</option>
+                        </c:forEach>
+                    </select><br/>
+
+                    <label>Hình Ảnh</label>
+                    <input type="file" class="form-control" id="uploadhinhanh" name="uploadhinhanh"></br>
+					<br/>
+                </form>
+                    <div id="containerChitietsanpham">
+
+                        <div class="chitietsanpham">
+                            <label>Chi Tiết</label></br>
+
+                            <select name="size" class="form-control">
+                                 <c:forEach items="${sizeList}" var="sizeList">
+                                    <option value="${sizeList.id}">${sizeList.sizeName}</option>
+                                </c:forEach>
+                            </select></br></br>
+
+                            <select name="mau" class="form-control">
+                                 <c:forEach items="${colorList}" var="colorList">
+                                    <option value="${colorList.id}">${colorList.colorName}</option>
+                                </c:forEach>
+                            </select></br></br>
+
+                            <input type="number" name="soluong" class="form-control" placeholder="Số Lượng"/></br>
+                            <button type="button" class="btn btn-danger btn-remove" style="display: inline;">Remove DetailProduct</button>
+                            <button type="button" class="btn btn-success btn-detail" style="float:right;display: inline;">Add DetailProduct</button></br>
+                        </div></br></br>
+                    </div>
+
+                        <div class="chitietsanpham" id="idChiTietSanPham">
+                            <label>Chi Tiết</label></br>
+
+                            <select name="size" class="form-control" id="size1">
+                                <c:forEach items="${sizeList}" var="sizeList">
+                                    <option value="${sizeList.id}">${sizeList.sizeName}</option>
+                                </c:forEach> 
+                            </select></br></br>
+
+                            <select name="mau" class="form-control" id="mau1">
+                                 <c:forEach items="${colorList}" var="colorList">
+                                    <option value="${colorList.id}">${colorList.colorName}</option>
+                                </c:forEach>
+                            </select></br></br>
+
+                            <input type="number" name="soluong" id="soLuong1" class="form-control" placeholder="Số Lượng"/></br>
+                            <button type="button" class="btn btn-danger btn-remove" style="display: inline;">Remove DetailProduct</button>
+                            <button type="button" class="btn btn-success btn-detail" style="float:right;display: inline;">Add DetailProduct</button></br><br/>
+                            <button type="button" class="btn btn-dark hide" id="cancel">Cancel</button>
+                            <button type="button" class="btn btn-primary hide capNhatSanPham" id="capNhatSanPham">Update Product</button>
+                        </div></br></br>
+                    <button id="btn-themSanPham" type="button" class="btn btn-success">Add Product</button>
+
+            </div>
+        <div class="col-md-6 col-sm-12">
+            <div>
+                <h2 style="display: inline;">Product</h2>
+                <button type="button" class="btn btn-danger" id="button-delete" style="float:right;display: inline;">Delete</button>
+            </div>
+            <table class="table table-hover" id="table-product">
+                <thead>
+                <tr>
+                    <th><input type="checkbox" class="AllCheckBox" id="allBox"></th>
+                    <th>Mã Sản Phẩm</th>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Giá Tiền</th>
+                    <th>Setting</th>
+                </tr>
+                </thead>
+                <tbody>
+             <c:forEach items="${productList1}" var="pro">
+                    <tr>
+                        <td><input type="checkbox" value="${pro.id}" name="sport"/></td>
+                        <td>${pro.id}</td>
+                        <td>${pro.productName}</td>
+                        <td>${pro.price}</td>
+                        <td><button type="button" class="btn btn-warning" value="${pro.id}" id="editProduct">Edit</button></td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+            <ul style="display: inline;list-style-type: none;" class="pagination">
+                <c:forEach begin="1" end="${tongSoTrang}" var="trangThu">
+                     <li style="display: inline;margin-left: -6%;" class="page-item">
+                         <a href="/shoponline/admin-product/${trangThu}" class="page" style="padding: 7px 10px;border-radius: 5px; border:1px blue solid;"><c:out value="${trangThu}"/></a>
+                     </li>
+                </c:forEach>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<script type="text/javascript" src="<c:url value='/resources/js/productManage.js'/>"></script>
+
+</html>

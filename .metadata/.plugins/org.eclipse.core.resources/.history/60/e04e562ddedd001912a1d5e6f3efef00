@@ -1,0 +1,38 @@
+package shoponline.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import shoponline.entity.Product;
+import shoponline.service.impl.ProductServiceImpl;
+
+@Controller
+public class ProductManageAdmin {
+
+	@Autowired
+	private ProductServiceImpl productServiceImpl; 
+	
+	@GetMapping("/admin-product")
+	public ModelAndView pageManageProduct() {
+		ModelAndView mav = new ModelAndView("Product_Admin");
+		
+		Pageable page = new PageRequest(0,5);
+		Page<Product> listProduct = productServiceImpl.pagenationProduct(page);
+        List<Product> productList1 = new ArrayList<Product>();
+        for (Product pro:listProduct
+        ) {
+        	productList1.add(pro);
+        }
+
+        mav.addObject("productList1", productList1);
+		return mav;
+	}
+}

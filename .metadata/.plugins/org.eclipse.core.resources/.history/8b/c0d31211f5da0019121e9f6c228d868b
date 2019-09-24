@@ -1,0 +1,5 @@
+package shoponline.dto;
+
+public class ProductDTO {
+
+}

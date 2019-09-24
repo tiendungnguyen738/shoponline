@@ -1,0 +1,5 @@
+package shoponline.entity;
+
+public class OrdersDetail {
+
+}

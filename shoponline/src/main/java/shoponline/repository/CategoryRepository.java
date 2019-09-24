@@ -1,0 +1,15 @@
+package shoponline.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import shoponline.entity.Category;
+
+public interface CategoryRepository extends JpaRepository<Category, Long>{
+	
+	@Query("select u from Category u")
+	public List<Category> getListCategory();
+
+}

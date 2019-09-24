@@ -1,0 +1,142 @@
+$(document).ready(function(){
+	
+    var files= [];
+	var nameImage = "";
+	$("#uploadhinhanh").change(function(event){
+		 files = event.target.files;
+	       nameImage = files[0].name;
+	       var forms = new FormData();
+	       forms.append("file",files[0]);
+	       $.ajax({
+	           url:"/shoponline/api-product-manage/upload-image",
+	           type:"POST",
+	           data:forms,
+	           processData: false,
+	           contentType: false,
+	           enctype:"multipart/form-data",
+	           success:function(value){
+	               alert("upload thanh cong");
+	           }
+	       })
+	})
+	
+	$("body").on("click",".btn-detail",function(){
+		var This = $("#idChiTietSanPham").clone();
+		This.removeAttr("id");
+		This.appendTo($("#containerChitietsanpham"));
+	})
+	
+	$("body").delegate(".btn-remove","click",function(){
+		this.closest(".chitietsanpham").remove();
+	})
+	
+	$("body").on("click","#btn-themSanPham",function(){
+		var productForm = {};
+		var productDetail =[];
+		
+		var form  = $("#form-sanpham").serializeArray();
+		$.each(form, function(i, field){
+		   productForm[field.name] = field.value;
+		  });	
+		
+		$("#containerChitietsanpham > .chitietsanpham").each(function(){
+			objectChiTiet = {};
+            mauSanPham = $(this).find('select[name="mau"]').val();
+            sizeSanPham = $(this).find('select[name="size"]').val();
+            soLuong = $(this).find('input[name="soluong"]').val();
+
+            objectChiTiet["mauSanPham"] = mauSanPham;
+            objectChiTiet["sizeSanPham"] = sizeSanPham;
+            objectChiTiet["soLuong"] = soLuong;
+
+            productDetail.push(objectChiTiet);
+		});
+		
+		productForm["productDetail"] = productDetail;
+		productForm["nameImage"] = nameImage;
+		var formInfor = JSON.stringify(productForm);
+		console.log(formInfor);
+		$.ajax({
+			 url:"/shoponline/api-product-manage/add-product",
+			 type:"POST",
+			 data:{
+				 formInfor:formInfor
+			 },
+			 success:function(value){
+				 alert("add success");
+			 }
+			 
+		})
+	})
+	
+	$("body").on("click","#editProduct",function(){
+		
+		var productForm = {};
+		var productDetail =[];
+		
+		var form  = $("#form-sanpham").serializeArray();
+		$.each(form, function(i, field){
+		   productForm[field.name] = field.value;
+		  });	
+		
+		$("#containerChitietsanpham > .chitietsanpham").each(function(){
+			objectChiTiet = {};
+            mauSanPham = $(this).find('select[name="mau"]').val();
+            sizeSanPham = $(this).find('select[name="size"]').val();
+            soLuong = $(this).find('input[name="soluong"]').val();
+
+            objectChiTiet["mauSanPham"] = mauSanPham;
+            objectChiTiet["sizeSanPham"] = sizeSanPham;
+            objectChiTiet["soLuong"] = soLuong;
+
+            productDetail.push(objectChiTiet);
+		});
+		
+		productForm["productDetail"] = productDetail;	
+		var formInfor = JSON.stringify(productForm);
+		console.log(formInfor);
+		$.ajax({
+			 url:"/shoponline/api-product-manage/update-product",
+			 type:"POST",
+			 data:{
+				 formInfor:formInfor
+			 },
+			 success:function(value){
+				 alert("add success");
+			 }
+			 
+		})
+	})
+	
+	
+//	$("body").on("click","#allBox",function(){
+//		var This = $(this);
+//		if($(this).prop('checked')){
+//			alert("vao ham");
+//			$("#table-product tbody tr td input[name='sport']").each(function(){			
+//				$(this).prop('checked','true');
+//			})
+//		}
+//		
+//			$("#table-product tbody tr td input[name='sport']").each(function(){			
+//				$(this).prop('checked','false');
+//			})
+//
+//	})
+	
+	$("#allBox").change(function(){
+       if(this.checked){
+           $("#table-product input").each(function () {
+                $(this).prop("checked",true);
+           })
+       }else {
+           $("#table-product input").each(function () {
+               $(this).prop("checked",false);
+           })
+       }
+   })
+	
+	
+	
+	
+})

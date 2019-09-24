@@ -1,0 +1,9 @@
+package shoponline.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import shoponline.entity.Size;
+
+public interface SizeRepository extends JpaRepository<Size, Long>{
+
+}

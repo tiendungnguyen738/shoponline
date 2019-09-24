@@ -1,0 +1,23 @@
+package shoponline.entity;
+
+import java.io.Serializable;
+
+public class Order_Detail_Id implements Serializable{
+	
+	Long orders_id;
+	Long product_detail_id;
+	public Long getOrders_id() {
+		return orders_id;
+	}
+	public void setOrders_id(Long orders_id) {
+		this.orders_id = orders_id;
+	}
+	public Long getProduct_detail_id() {
+		return product_detail_id;
+	}
+	public void setProduct_detail_id(Long product_detail_id) {
+		this.product_detail_id = product_detail_id;
+	}
+	
+
+}

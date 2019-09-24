@@ -1,0 +1,5 @@
+package shoponline.repository;
+
+public interface OrdersDetailRepository {
+
+}

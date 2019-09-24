@@ -1,0 +1,5 @@
+package shoponline.entity;
+
+public class Order_Detail_Id {
+
+}

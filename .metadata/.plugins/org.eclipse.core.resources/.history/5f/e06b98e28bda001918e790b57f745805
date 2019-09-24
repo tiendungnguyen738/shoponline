@@ -1,0 +1,29 @@
+package shoponline.controller;
+
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.ModelAndView;
+
+import shoponline.dto.GioHangDTO;
+
+@Controller
+@SessionAttributes({"gioHang"})
+public class GioHangController {
+
+	@GetMapping("/gio-hang")
+	public ModelAndView pageGioHang(HttpSession httpSession) {
+		ModelAndView mav = new ModelAndView("gio-hang");
+		
+		if(httpSession.getAttribute("gioHang") != null) {
+			List<GioHangDTO> listSessionGioHang=  (List<GioHangDTO>) httpSession.getAttribute("gioHang");
+			mav.addObject("listSessionGioHang", listSessionGioHang);
+			mav.addObject("soLuongSanPham", listSessionGioHang.size());
+		}
+		return mav;
+	}
+}

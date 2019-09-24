@@ -1,0 +1,43 @@
+package shoponline.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import shoponline.entity.Product;
+import shoponline.repository.ProductRepository;
+import shoponline.service.ProductService;
+
+@Service
+public class ProductServiceImpl implements ProductService{
+
+	@Autowired
+	private ProductRepository productRepository;
+	
+	public int getTongSoLuongSanPham() {
+		return productRepository.getSoLuongSanPham();
+	}
+
+	public Page<Product> getTrangSanPham(Pageable pageable) {
+		return productRepository.findAll(pageable);
+	}
+
+	public Product getProductbyId(Long id) {
+		return productRepository.getOne(id);
+	}
+
+	@Override
+	public List<Product> listProductSearch(String productName) {
+		return productRepository.listProductSearch(productName);
+	}
+
+	@Override
+	public void ProductPopular(Long id) {
+		productRepository.PopularProduct(id);
+	}
+
+
+}

@@ -1,0 +1,15 @@
+package shoponline.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class ProductManageAdmin {
+
+	@GetMapping("/admin-product")
+	public ModelAndView pageManageProduct() {
+		ModelAndView mav = new ModelAndView("Product_Admin");
+		return mav;
+	}
+}

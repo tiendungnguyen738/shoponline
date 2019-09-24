@@ -1,0 +1,62 @@
+
+Sep 17, 2019 10:12:41.27 NEW SESSION
+Sep 17, 2019 10:12:41.27 [8812:424:0917/101241.270:ERROR:browser_process_sub_thread.cc(203)] Waited 18 ms for network service
+
+Sep 17, 2019 22:12:37.34 NEW SESSION
+Sep 17, 2019 22:12:37.34 [7336:8292:0917/221237.110:ERROR:socket_stream.cc(219)] Closing stream with result -2
+
+Sep 20, 2019 17:25:04.82 NEW SESSION
+Sep 20, 2019 17:25:04.82 [12568:8816:0920/172504.812:ERROR:browser_process_sub_thread.cc(203)] Waited 15 ms for network service
+
+Sep 23, 2019 15:31:08.32 NEW SESSION
+Sep 23, 2019 15:31:08.32 [72:5724:0923/153108.318:ERROR:data_pack.cc(117)] Could not open pak file for writing: The requested operation cannot be performed on a file with a user-mapped section open. (0x4C8)
+Sep 23, 2019 16:37:41.81 [72:9300:0923/163741.800:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:43.01 [72:9300:0923/163743.017:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:44.34 [72:9300:0923/163744.340:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:45.50 [72:9300:0923/163745.504:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:46.51 [72:9300:0923/163746.516:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:47.52 [72:9300:0923/163747.524:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:48.52 [72:9300:0923/163748.526:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:49.74 [72:9300:0923/163749.747:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:51.20 [72:9300:0923/163751.202:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:52.20 [72:9300:0923/163752.207:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:53.64 [72:9300:0923/163753.640:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:54.67 [72:9300:0923/163754.673:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:37:57.95 [72:9300:0923/163757.958:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:00.84 [72:9300:0923/163800.842:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:03.78 [72:9300:0923/163803.784:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:05.03 [72:9300:0923/163805.033:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:08.14 [72:9300:0923/163808.149:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:10.17 [72:9300:0923/163810.170:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:13.58 [72:9300:0923/163813.587:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:18.46 [72:9300:0923/163818.468:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:20.75 [72:9300:0923/163820.757:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:24.61 [72:9300:0923/163824.612:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:30.08 [72:9300:0923/163830.080:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:33.69 [72:9300:0923/163833.690:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:37.18 [72:9300:0923/163837.189:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:42.11 [72:9300:0923/163842.116:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:45.75 [72:9300:0923/163845.759:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:50.90 [72:9300:0923/163850.904:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:55.05 [72:9300:0923/163855.059:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:38:58.56 [72:9300:0923/163858.568:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:03.81 [72:9300:0923/163903.817:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:07.62 [72:9300:0923/163907.626:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:11.23 [72:9300:0923/163911.234:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:16.81 [72:9300:0923/163916.814:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:20.87 [72:9300:0923/163920.875:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:26.14 [72:9300:0923/163926.143:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:30.30 [72:9300:0923/163930.302:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:35.78 [72:9300:0923/163935.782:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:40.73 [72:9300:0923/163940.739:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:44.77 [72:9300:0923/163944.773:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:50.25 [72:9300:0923/163950.252:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:53.06 [72:9300:0923/163953.061:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:55.82 [72:9300:0923/163955.825:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+Sep 23, 2019 16:39:58.22 [72:9300:0923/163958.225:ERROR:page_load_metrics_update_dispatcher.cc(166)] Invalid first_paint 3.65 s for first_image_paint 3.64 s
+
+Sep 23, 2019 19:57:35.81 NEW SESSION
+Sep 23, 2019 19:57:35.81 [6272:816:0923/195735.813:ERROR:data_pack.cc(117)] Could not open pak file for writing: The requested operation cannot be performed on a file with a user-mapped section open. (0x4C8)
+
+Sep 24, 2019 20:02:27.32 NEW SESSION
+Sep 24, 2019 20:02:27.32 [9632:11352:0924/200227.327:ERROR:data_pack.cc(117)] Could not open pak file for writing: The requested operation cannot be performed on a file with a user-mapped section open. (0x4C8)

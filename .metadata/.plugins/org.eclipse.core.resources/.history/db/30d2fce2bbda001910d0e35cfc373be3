@@ -1,0 +1,63 @@
+package shoponline.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.ModelAndView;
+
+import shoponline.dto.GioHangDTO;
+import shoponline.entity.Product;
+import shoponline.service.impl.CategoryServiceImpl;
+import shoponline.service.impl.ProductServiceImpl;
+
+@Controller
+@RequestMapping("/")
+@SessionAttributes({"gioHang"})
+public class HomeController {
+
+	@Autowired
+	private CategoryServiceImpl categoryServiceImpl;
+	
+	@Autowired
+	private ProductServiceImpl productServiceImpl;
+	
+	@GetMapping("/")
+	public ModelAndView pageAdmin(HttpSession httpSession) {
+		ModelAndView mav = new ModelAndView("trang-chu-san-pham");
+		int soLuongSanPham = productServiceImpl.getTongSoLuongSanPham();
+		Pageable pageable = new PageRequest(0,5);
+		Page<Product> listProduct =  productServiceImpl.getTrangSanPham(pageable);
+		List<Product> listProduct1 = new ArrayList<Product>();
+		for (Product product : listProduct) {
+			listProduct1.add(product);
+		}
+		if(null != httpSession.getAttribute("gioHang")) {
+			List<GioHangDTO> listGioHang = (List<GioHangDTO>) httpSession.getAttribute("gioHang");
+			mav.addObject("soLuongSanPham", listGioHang.size());
+		}
+		mav.addObject("listProduct1", listProduct1);
+		return mav;
+	}
+	
+	@GetMapping("/search")
+	public ModelAndView getListProductSearch(@RequestParam String productName){
+		System.out.println(productName);
+		ModelAndView mav = new ModelAndView("trang-chu-san-pham");
+		List<Product> listProductSearch = productServiceImpl.listProductSearch(productName);
+		mav.addObject("listProductSearch", listProductSearch);
+		return mav;
+	}
+}
