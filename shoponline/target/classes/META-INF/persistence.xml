@@ -9,6 +9,9 @@
 	          <class>shoponline.entity.Product</class>
 	          <class>shoponline.entity.ProductDetail</class>
               <class>shoponline.entity.Size</class>
+              <class>shoponline.entity.UserEntity</class>
+              <class>shoponline.entity.RoleEntity</class>
+              <class>shoponline.entity.BaseEntity</class>
               <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.connection.charSet" value="utf8"/>

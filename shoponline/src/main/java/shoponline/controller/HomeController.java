@@ -42,6 +42,12 @@ public class HomeController {
 	@Autowired
 	private ProductServiceImpl productServiceImpl;
 	
+	@GetMapping("/dang-nhap")
+	public ModelAndView pageLogin() {
+		ModelAndView mav= new ModelAndView("login");
+		return mav;
+	}
+	
 	@GetMapping("/")
 	public ModelAndView pageAdmin(HttpSession httpSession) {
 		ModelAndView mav = new ModelAndView("trang-chu-san-pham");

@@ -52,7 +52,7 @@
 						<div class="user-panel">
 							<div class="up-item">
 								<i class="flaticon-profile"></i>
-								<a href="#">Sign</a> In or <a href="#">Create Account</a>
+								<a href="/shoponline/dang-nhap">Sign</a> In or <a href="#">Create Account</a>
 							</div>
 							<div class="up-item">
 								<div class="shopping-card">

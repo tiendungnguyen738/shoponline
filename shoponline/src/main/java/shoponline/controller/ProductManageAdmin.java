@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import shoponline.entity.Category;
@@ -36,6 +37,12 @@ public class ProductManageAdmin {
     @Autowired
     private ColorServiceImpl colorServiceImpl;
 	
+    @RequestMapping(value = "/quan-tri/trang-chu", method = RequestMethod.GET)
+	public ModelAndView homePage() {
+		ModelAndView mav = new ModelAndView("home-admin");
+		return mav;
+	}
+    
 	@RequestMapping(path= {"/admin-product/{id}","/admin-product"})
 	public ModelAndView pageManageProduct(@PathVariable(name="id", required = false) Integer id ) {
 		ModelAndView mav = new ModelAndView("Product_Admin");
