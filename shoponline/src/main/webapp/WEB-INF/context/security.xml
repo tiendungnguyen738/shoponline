@@ -9,7 +9,11 @@
             
     <http auto-config="false" use-expressions="true" disable-url-rewriting="true">
     
-    	<intercept-url pattern="/quan-tri/trang-chu" access="hasAnyRole('ADMIN')" />
+    <!-- khi chưa có dòng phân quyền này thì ta có thể truy cập url quan-tri/trang-chu với 2 cách 
+    	c1: gõ trực tiếp url quan-tri/trang-chu lên thanh url để truy cập
+    	c2: đăng nhập với quyền ADMIN 
+    	để loại bỏ cách 1 thì dùng dòng này -->
+    <intercept-url pattern="/quan-tri/trang-chu" access="hasAnyRole('ADMIN')" />
     	
     	<access-denied-handler error-page="/accessDenied" />
         <form-login  login-page="/dang-nhap"

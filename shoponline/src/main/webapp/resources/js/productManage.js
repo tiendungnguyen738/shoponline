@@ -121,7 +121,7 @@ $(document).ready(function(){
 	   var idProduct;
 	   $("#table-product input[name='sport']:checked").each(function () {
 		   idProduct = $(this).val();
-		   var This = $(this);
+		   $(this).closest("tr").remove();
 		   $.ajax({
 			   url:"/shoponline/api-product-manage/delete-product",
 			   type:"POST",
@@ -130,7 +130,6 @@ $(document).ready(function(){
 			   },
 			   success:function(value){
 				   alert("delete success !!!");
-				   This.closest("tr").remove();
 			   }
 		   })
       })

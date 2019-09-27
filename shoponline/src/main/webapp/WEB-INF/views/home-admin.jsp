@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
-
+<%@ page import="shoponline.utils.SecurityUtils" %>
 <html>
 <head>
 	<title>Product-Manage</title>
@@ -76,11 +76,13 @@
 
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="nav navbar-nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="#">Page</a>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="#">Page</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Page</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Page</a></li>
+							 <li class="nav-item"><a class="nav-link" href="#">Xin chào, <%=SecurityUtils.getPrincipal().getUserName()%></a></li>
+							<li class="nav-item active"><a href='<c:url value='/thoat'/>'>
+			                            <i class="ace-icon fa fa-power-off"></i>
+			                            Thoát
+                       			</a>
+							</li> 
 						</ul>
 					</div>
 				</div>
